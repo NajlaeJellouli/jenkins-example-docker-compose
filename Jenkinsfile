@@ -1,19 +1,12 @@
 pipeline {
-  agent any
-  stages {
-    stage("verify tooling") {
-      steps {
-        
-        sh   'docker version'
-         sh '   docker info'
-          sh 'docker compose version '
-          
-        
-      }
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                // Exécute la commande "docker version" pour vérifier la version de Docker
+                sh 'docker version'
+            }
+        }
     }
-   
-    
-   
-  }
- 
 }
