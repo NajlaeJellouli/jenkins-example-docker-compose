@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage("verify tooling") {
       steps {
-        sh '''
-          docker version
-          docker info
-          docker compose version 
+        
+        sh   'docker version'
+         sh '   docker info'
+          sh 'docker compose version '
           
-        '''
+        
       }
     }
    
